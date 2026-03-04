@@ -75,15 +75,16 @@ func Registerroutes() {
 	routes.Quarters(router)
 	/***************************************************************************************************************/
 	// --- HTTPS SERVER START ---
-	fmt.Println("Server starting on port 2580 (HTTPS Enabled)")
+	fmt.Println("Server starting on port 2600 (HTTPS Enabled)")
 
 	certFile := "certificate.pem"
 	keyFile := "key.pem"
 
-	if err := router.RunTLS(":2580", certFile, keyFile); err != nil {
+	if err := router.RunTLS(":2600", certFile, keyFile); err != nil {
 		log.Fatalf("Server failed to start: %v", err)
 	}
 }
+
 
 
 
